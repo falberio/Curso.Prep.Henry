@@ -1,0 +1,117 @@
+//// Variables ////
+
+En programación, usamos las variables para guardar valores, a los cuales luego podemos acceder haciendo referencia a esa ellas. 
+Para declarar una nueva variable escribimos alguna de las palabras reservadas "var", "let" o "const" según corresponda, y luego el nombre de la variable:
+
+var edad;
+
+Ahí estamos declarando una variable con el nombre "edad", el cual luego podemos utilizar para acceder a la misma.
+
+Luego podemos asignarle un valor a esa variable, haciendo uso del operador "="
+
+edad = 15;
+
+
+A partir de ahora, cuando accedamos a la variable (edad), tendremos accesible su valor (15).
+
+
+Pero también podemos ser más eficientes declarando la variable y asignandole un valor en una sola expresión:
+
+var edad = 15;
+
+El resultado es el mismo.
+
+
+La variable que acabamos de declarar, es de tipo "number". Existen otros tipos de variables, entre ellos: String
+
+
+
+//// String ////
+
+String es una variable de tipo texto, la cuál no es más que una cadena de carácteres. 
+En las variable de tipo string, el valor debe ir rodeado de comillas:
+
+var apellido = "Riquelme";
+
+De nuevo, declaramos (var) la variable con su nombre (apellido) y mediante el operador (=) le asignamos un valor ("Riquelme").
+
+En las variables de tipo String, no solo podemos usar letras, sino también otro tipo de carácteres:
+
+var clave = "MiPassword1234";
+
+El funcionamiento es el mismo, aunque el valor de nuestra variable en este caso, también contenga números, porque estamos rodeando el valor entre comillas. Asímismo, podemos declarar una variable de tipo String que solo contenga números:
+
+var clave = "1234";
+
+Este también es un String, o sea una cadena de carácteres, que en este caso són números.
+
+
+
+//// Funciones ////
+
+Una función es un bloque de código, al cual podemos definir para que nos devuelva un resultado, teniendo en cuenta las declaraciones que hagamos dentro de la función misma, y con la opción de pasarle parámetros, con los cuales podemos trabajar para llegar al resultado deseado.
+
+Una función se puede declarar con la palabra registrada "function" seguida de "()" en los cuales dentro podemos ingresar los parámetros, y luego unas llaves "{}" donde escribiremos las declaraciones y exprresiones que queramos que contenga nuestra función.
+
+function obtenerClave (clave) {
+    return clave;
+}
+
+Declaramos una función "function"
+Le asignamos un nombre ("obtenerClave")
+Le pasamos un parámetro, que en este caso es la variable ("clave")
+Escribimos lo que va a hacer nuestra función dentro de las "{}"
+En este caso, nuestra función va a retornar el valor de la variable "clave"
+
+
+
+
+
+//// Declaraciones if ////
+
+"Si la clave que acaba de ingresar el usuario, coincide con la clave que está guardada en la base de datos, entonces el usuario va a tener acceso a nuestro sitio"
+
+Así definiríamos un condicional con nuestras palabras, en nuestro lenguaje cotidiano. En código es un tanto distinto, pero el objetivo es el mismo: Si se cumple una condición, entonces ejecuto una o más acciones.
+
+En JavaScript esto sería:
+
+if(claveIngresada === claveGuardada) {
+    return true;
+}
+
+Entendiendo que claveIngresada es la clave que acabo de escribir el usuario, comparamos ese valor con el que tenemos guardado previamente. Si ambos coinciden, devolvemos true. ¿Pero qué es "true"?
+
+
+
+//// Valores Booleanos ////
+
+Así como tenmos los tipos de variables "number" y "String", también existen los "booleanos", los cuales solo pueden ser "true" o "false". En el ejemplo anterior en el cuál comaprabamos las claves, nuestro condicional devolvía "true" si la condición se cumplia (es decir si las claves eran iguales) o "false" si no lo eran.
+
+Podemos declarar una variable con un valor booleano de la siguiente manera:
+
+var usuarioAutenticado = false;
+
+Tener en cuenta que no usamos comillas ("") al asignar el valor. Si lo hicieramos, sería un String:
+
+var usuarioAutenticado = "false" // Esto es un String con el texto "false".
+
+
+Tienen un uso muy aprovechable y se usan constantemente. En el caso de ejemplo, nos podría servrir para saber si hay un usuario autenticado, para dependiendo de ello mostrar o no información en nuestro sitio web.
+En ese caso, la variable "usuarioAutenticado" comienza con un valor false, el cual luego podríamos pasar a true una vez que el usuario ingrese la clave (y en caso de que esta sea correcta).
+
+Luego podríamos modificarle el valor mediante un condicional "if", como hicimos en un ejemplo anterior:
+
+if(claveIngresada === claveGuardada) {
+    usuarioAutenticado = true;
+}
+
+Ahora en vez de devolver true o false, lo que hacemos es reasignar el valor de la variable "usuarioAutenticado", dependiendo de la condición (lo que agregamos entre paréntesis).
+
+Es decir, la condición, es que ambas claves sean iguales. Si esto sucede, el valor de "usuarioAutenticado" ahora va a ser "true", y si esto no se cumple, el valor anterior se mantiene. Nada se modifica.
+
+
+
+PD: No se si para que lo entienda un nene o una nena de 12 años, pero me sirvió muchisimo para entenderlo yo!
+PD2: Perdón por la extensión
+
+
